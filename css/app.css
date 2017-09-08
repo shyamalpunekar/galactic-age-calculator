@@ -1,0 +1,44 @@
+h2 {
+    text-align: center;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background: url("../images/solar.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: grey;
+}
+
+.btn {
+    margin: 5px;
+    background: #c4e5ed;
+}
+
+.col-md-6 {
+    text-align : justify;
+}
+
+a{
+    color: white;
+}
+
+.well {
+     background-color: rgba(255,255,255, 0.6);
+     color: black;
+ }
+
+
+.registerButton {
+    background: #556e96;
+    color: white;
+}
+.panel-heading {
+    background: #556e96;
+    color: white;
+}

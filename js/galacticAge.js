@@ -5,10 +5,12 @@ function Solar(userName) {
 
 Solar.prototype.galacticAgeInSeconds= function(userAge) {
   var outputAge;
-  alert(userAge);
   var EARTH_YEARS_IN_SECONDS = 365 * 24 * 60 * 60;
   outputAge = userAge * EARTH_YEARS_IN_SECONDS;
    return outputAge;
 };
+
+
+
 
 exports.galacticAgeModule = Solar;
