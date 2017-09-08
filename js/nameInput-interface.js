@@ -3,6 +3,6 @@ $(document).ready(function(){
     event.preventDefault();
     var userName = $('#name').val();
     $('#userName-form').hide();
-    $('#displayUserName').prepend('<p>Hi ' + userName + ' , here is your age in seconds</p>');
+    $('#displayUserName').append('<p>Hi ' + userName + ' , here is your age in seconds</p>');
   });
 });

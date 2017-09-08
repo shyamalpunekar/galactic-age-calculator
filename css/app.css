@@ -29,16 +29,15 @@ a{
 }
 
 .well {
-     background-color: rgba(255,255,255, 0.6);
+     background-color: rgba(253, 250, 300, 0.4);
      color: black;
  }
 
-
 .registerButton {
-    background: #556e96;
+    background: #5C5685;
     color: white;
 }
 .panel-heading {
-    background: #556e96;
+    background: #5C5685;
     color: white;
 }

@@ -1,9 +1,8 @@
-function Solar(userName) {
-  this.name = userName;
+function SpaceAge(seconds) {
+  this.ageInSeconds = seconds;
 }
 
-
-Solar.prototype.galacticAgeInSeconds= function(userAge) {
+SpaceAge.prototype.spaceAgeInSeconds= function(userAge) {
   var outputAge;
   var EARTH_YEARS_IN_SECONDS = 365 * 24 * 60 * 60;
   outputAge = userAge * EARTH_YEARS_IN_SECONDS;
@@ -12,5 +11,12 @@ Solar.prototype.galacticAgeInSeconds= function(userAge) {
 
 
 
+SpaceAge.prototype.getSeconds = function () {
+    return this.ageInSeconds;
+};
 
-exports.galacticAgeModule = Solar;
+SpaceAge.prototype.onEarth = function () {
+    return this.ageInSeconds / SpaceAge.EARTH_YEARS_IN_SECONDS_$LI$();
+};
+
+exports.spaceAgeModule = SpaceAge;

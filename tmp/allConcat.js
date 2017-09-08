@@ -1,13 +1,14 @@
-var Solar = require('./../js/galacticAge.js').galacticAgeModule;
+var SpaceAge = require('./../js/galacticAge.js').SpaceAgeModule;
 
   $(document).ready(function() {
     $('#galctic-age-form').submit(function(event) {
       event.preventDefault();
       var userAge = $('#inputAge').val();
-      var calculateSolar = new Solar("test");
-      var output = calculateSolar.galacticAgeInSeconds(userAge);
+      var calculateSpaceAge = new SpaceAge(200);
+      var output = calculateSpaceAge.spaceAgeInSeconds(userAge);
+      var ageSeconds = calculateSpaceAge.getSeconds();
       $('#displayUserAge').append("<li>" + output + "</li>");
-
+      $('#displayUserAge').append("<li>" + ageSeconds + "</li>");
     });
   });
 
@@ -16,7 +17,7 @@ $(document).ready(function(){
     event.preventDefault();
     var userName = $('#name').val();
     $('#userName-form').hide();
-    $('#displayUserName').prepend('<p>Hi ' + userName + ' , here is your age in seconds</p>');
+    $('#displayUserName').append('<p>Hi ' + userName + ' , here is your age in seconds</p>');
   });
 });
 
