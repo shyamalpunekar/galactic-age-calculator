@@ -9,14 +9,12 @@ SpaceAge.prototype.spaceAgeInSeconds= function(userAge) {
    return outputAge;
 };
 
-
-
 SpaceAge.prototype.getSeconds = function () {
     return this.ageInSeconds;
 };
 
 SpaceAge.prototype.onEarth = function () {
-    return this.ageInSeconds / SpaceAge.EARTH_YEARS_IN_SECONDS_$LI$();
+    return this.ageInSeconds / SpaceAge.EARTH_YEARS_IN_SECONDS();
 };
 
 exports.spaceAgeModule = SpaceAge;
