@@ -15,30 +15,24 @@
   <body>
     <div class="panel-heading">
       <h2>Galactic Age Calculator</h2>
-      <h3>Current Time is <span id="time"></span> </h3>
+      <h3 class="time">Current Time is <span id="time"></span> </h3>
     </div>
     <div class="well">
-      <div class="row">
-        <div class="col-md-6">
+
           <form id="galctic-age-form">
             <label for="inputAge">Enter your age in years</label>
             <input id="inputAge" type="number" min="1" >
-            <button type="submit" class="btn registerButton">Submit</button>
-          </form>
-        </div>
-      </div><br>
-        <div class="row">
-        <div class="col-md-6">
-          <form id="userName-form">
+
+             <label for="dateOfBirth">Date of Birth</label>
+             <input id="dateOfBirth" name="dateOfBirth" type="date" required>
+
             <label for="name">Enter your Name:</label>
             <input id="name" type="text">
             <button type="submit" class="btn registerButton">Submit</button>
+
           </form>
-        </div>
-        </div>
         <div class="row">
-            <ul id="displayUserName"></ul>
-            <ul id="displayUserAge"></ul>
+             <p><span id="displayEarthAge"></span></p>
         </div>
 
     </div>

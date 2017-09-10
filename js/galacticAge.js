@@ -1,20 +1,42 @@
-function SpaceAge(seconds) {
-  this.ageInSeconds = seconds;
+import  moment  from './../node_modules/moment/moment.js';
+
+export class SpaceAge {
+  constructor (dateOfBirth) {
+
+    this.dateOfBirth = dateOfBirth;
+    this.dateInSeconds = this.getCalculatedDateInSeconds();
+  }
+
+
+convertStringToDate() {
+  let moment = require('moment');
+  let date = moment(this.dateOfBirth);
+  return date;
 }
 
-SpaceAge.prototype.spaceAgeInSeconds= function(userAge) {
-  var outputAge;
-  var EARTH_YEARS_IN_SECONDS = 365 * 24 * 60 * 60;
-  outputAge = userAge * EARTH_YEARS_IN_SECONDS;
-   return outputAge;
-};
+getCalculatedDateInSeconds(){
+  let date = this.convertStringToDate();
+  let currentDateTime = moment();
 
-SpaceAge.prototype.getSeconds = function () {
-    return this.ageInSeconds;
-};
+  let covertedDate = currentDateTime.diff(date,'seconds');
 
-SpaceAge.prototype.onEarth = function () {
-    return this.ageInSeconds / SpaceAge.EARTH_YEARS_IN_SECONDS();
-};
+    return covertedDate;
+}
 
-exports.spaceAgeModule = SpaceAge;
+getEarthAge(){
+    return this.covertToYearsDays(this.dateInSeconds);
+  }
+
+  covertToYearsDays(dateInSeconds){
+    let moment = require('moment');
+    const yearDays = 365;
+    let days = moment.duration(dateInSeconds,'seconds').asDays();
+    let numYears = days/yearDays;
+    let numDays = days % yearDays;
+
+
+    let calculatedSpaceAge = [numYears,numDays];
+    return calculatedSpaceAge;
+  }
+
+}

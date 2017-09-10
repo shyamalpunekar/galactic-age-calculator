@@ -6,6 +6,8 @@ var uglify = require('gulp-uglify');
 var utilities = require('gulp-util');
 var buildProduction = utilities.env.production;
 var del = require('del');
+var babelify = require("babelify");
+
 var lib = require('bower-files')({
   "overrides":{
     "bootstrap" : {
@@ -18,7 +20,7 @@ var lib = require('bower-files')({
   }
 });
 var browserSync = require('browser-sync').create();
-
+var moment = require('moment');
 gulp.task('concatInterface', function() {
   return gulp.src(['./js/*-interface.js'])
     .pipe(concat('allConcat.js'))
@@ -27,6 +29,9 @@ gulp.task('concatInterface', function() {
 
 gulp.task('jsBrowserify', ['concatInterface'], function() {
   return browserify({ entries: ['./tmp/allConcat.js'] })
+  .transform(babelify.configure({
+     presets: ["es2015"]
+   }))
     .bundle()
     .pipe(source('app.js'))
     .pipe(gulp.dest('./build/js'));
@@ -38,12 +43,7 @@ gulp.task("minifyScripts", ["jsBrowserify"], function(){
     .pipe(gulp.dest("./build/js"));
 });
 
-gulp.task('jsBrowserify', ['concatInterface'], function() {
-  return browserify({ entries: ['./tmp/allConcat.js'] })
-    .bundle()
-    .pipe(source('app.js'))
-    .pipe(gulp.dest('./build/js'));
-});
+
 
 gulp.task("clean", function(){
   return del(['build', 'tmp']);

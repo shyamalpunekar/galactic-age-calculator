@@ -7,6 +7,9 @@ html {
   min-height: 100%;
 }
 
+.time{
+  margin-left: 400px;
+}
 body {
   background: url("../images/solar.jpg");
   background-repeat: no-repeat;
