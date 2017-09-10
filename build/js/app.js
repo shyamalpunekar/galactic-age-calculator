@@ -47,6 +47,12 @@ var SpaceAge = exports.SpaceAge = function () {
       return this.covertToYearsDays(this.dateInSeconds);
     }
   }, {
+    key: 'getMercuryAge',
+    value: function getMercuryAge() {
+      var mercuryAgeInSeconds = this.dateInSeconds * 0.24;
+      return this.covertToYearsDays(mercuryAgeInSeconds);
+    }
+  }, {
     key: 'covertToYearsDays',
     value: function covertToYearsDays(dateInSeconds) {
       var moment = require('moment');
@@ -54,7 +60,6 @@ var SpaceAge = exports.SpaceAge = function () {
       var days = moment.duration(dateInSeconds, 'seconds').asDays();
       var numYears = days / yearDays;
       var numDays = days % yearDays;
-
       var calculatedSpaceAge = [numYears, numDays];
       return calculatedSpaceAge;
     }
@@ -4540,8 +4545,12 @@ $(document).ready(function () {
     var inputBirthDate = $("#dateOfBirth").val();
     var calculateSpaceAge = new _galacticAge.SpaceAge(inputBirthDate);
     var earthAge = calculateSpaceAge.getEarthAge();
+    var mercuryAge = calculateSpaceAge.getMercuryAge();
 
+    $("#displayCurrentDateAndTime").text(moment());
+    $("#displayTextOne").text('Age on Earth is');
     $("#displayEarthAge").text(earthAge[0] + ' years and ' + earthAge[1] + ' days.');
+    $("#displayMercuryAge").text(mercuryAge[0] + ' years and ' + mercuryAge[1] + ' days.');
   });
 });
 
@@ -4556,6 +4565,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('#time').text(moment());
+  $('#displayCurrentDateAndTime').hide();
 });
 
 },{"./../js/galacticAge.js":1}]},{},[3]);

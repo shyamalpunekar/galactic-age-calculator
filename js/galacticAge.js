@@ -2,11 +2,9 @@ import  moment  from './../node_modules/moment/moment.js';
 
 export class SpaceAge {
   constructor (dateOfBirth) {
-
     this.dateOfBirth = dateOfBirth;
     this.dateInSeconds = this.getCalculatedDateInSeconds();
   }
-
 
 convertStringToDate() {
   let moment = require('moment');
@@ -23,8 +21,13 @@ getCalculatedDateInSeconds(){
     return covertedDate;
 }
 
-getEarthAge(){
+  getEarthAge(){
     return this.covertToYearsDays(this.dateInSeconds);
+  }
+
+  getMercuryAge(){
+    let mercuryAgeInSeconds = this.dateInSeconds * 0.24;
+    return this.covertToYearsDays(mercuryAgeInSeconds);
   }
 
   covertToYearsDays(dateInSeconds){
@@ -33,10 +36,11 @@ getEarthAge(){
     let days = moment.duration(dateInSeconds,'seconds').asDays();
     let numYears = days/yearDays;
     let numDays = days % yearDays;
-
-
     let calculatedSpaceAge = [numYears,numDays];
     return calculatedSpaceAge;
   }
+
+
+
 
 }
