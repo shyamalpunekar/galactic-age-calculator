@@ -8,11 +8,16 @@ import { SpaceAge } from './../js/galacticAge.js';
       let calculateSpaceAge = new SpaceAge(inputBirthDate);
       let earthAge = calculateSpaceAge.getEarthAge();
       let mercuryAge = calculateSpaceAge.getMercuryAge();
-        
-       $("#displayCurrentDateAndTime").text(moment());
-       $("#displayTextOne").text('Age on Earth is');
-       $("#displayEarthAge").text(`${earthAge[0]} years and ${earthAge[1]} days.`);
-       $("#displayMercuryAge").text(`${mercuryAge[0]} years and ${mercuryAge[1]} days.`);
+      let venusAge = calculateSpaceAge.getVenusAge();
+      let marsAge = calculateSpaceAge.getMarsAge();
+      let jupiterAge = calculateSpaceAge.getJupiterAge();
 
+       $("#displayCurrentDateAndTime").text(moment());
+       $("#displayEarthAge").text(`Age on Earth is ${earthAge[0]} years and ${earthAge[1]} days.`);
+       $("#displayMercuryAge").text(`Age on Mercury is ${mercuryAge[0]} years and ${mercuryAge[1]} days.`);
+       $("#displayVenusAge").text(`Age on Venus is ${venusAge[0]} years and ${venusAge[1]} days.`);
+       $("#displayMarsAge").text(`Age on Mars is ${marsAge[0]} years and ${marsAge[1]} days.`);
+       $("#displayJupiterAge").text(`Age on Jupiter is ${jupiterAge[0]} years and ${jupiterAge[1]} days.`);
+       
     });
   });

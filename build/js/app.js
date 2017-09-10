@@ -53,6 +53,24 @@ var SpaceAge = exports.SpaceAge = function () {
       return this.covertToYearsDays(mercuryAgeInSeconds);
     }
   }, {
+    key: 'getVenusAge',
+    value: function getVenusAge() {
+      var venusAgeInSeconds = this.dateInSeconds * 0.62;
+      return this.covertToYearsDays(venusAgeInSeconds);
+    }
+  }, {
+    key: 'getMarsAge',
+    value: function getMarsAge(dateInSeconds) {
+      var marsAgeInSeconds = this.dateInSeconds * 1.88;
+      return this.covertToYearsDays(marsAgeInSeconds);
+    }
+  }, {
+    key: 'getJupiterAge',
+    value: function getJupiterAge(dateInSeconds) {
+      var jupiterAgeInSeconds = this.dateInSeconds * 11.86;
+      return this.covertToYearsDays(jupiterAgeInSeconds);
+    }
+  }, {
     key: 'covertToYearsDays',
     value: function covertToYearsDays(dateInSeconds) {
       var moment = require('moment');
@@ -4546,11 +4564,21 @@ $(document).ready(function () {
     var calculateSpaceAge = new _galacticAge.SpaceAge(inputBirthDate);
     var earthAge = calculateSpaceAge.getEarthAge();
     var mercuryAge = calculateSpaceAge.getMercuryAge();
+    var venusAge = calculateSpaceAge.getVenusAge();
+    var marsAge = calculateSpaceAge.getMarsAge();
+    var jupiterAge = calculateSpaceAge.getJupiterAge();
 
     $("#displayCurrentDateAndTime").text(moment());
-    $("#displayTextOne").text('Age on Earth is');
-    $("#displayEarthAge").text(earthAge[0] + ' years and ' + earthAge[1] + ' days.');
-    $("#displayMercuryAge").text(mercuryAge[0] + ' years and ' + mercuryAge[1] + ' days.');
+    //$("#displayTextOne").text('Age on Earth is');
+    $("#displayEarthAge").text('Age on Earth is ' + earthAge[0] + ' years and ' + earthAge[1] + ' days.');
+    //$("#displayTextTwo").text('Age on Mercury is');
+    $("#displayMercuryAge").text('Age on Mercury is ' + mercuryAge[0] + ' years and ' + mercuryAge[1] + ' days.');
+    //$("#displayTextThree").text('Age on Venus is');
+    $("#displayVenusAge").text('Age on Venus is ' + venusAge[0] + ' years and ' + venusAge[1] + ' days.');
+    //$("#displayTextFour").text('Age on Mars is');
+    $("#displayMarsAge").text('Age on Mars is ' + marsAge[0] + ' years and ' + marsAge[1] + ' days.');
+    //$("#displayTextFive").text('Age on Jupiter is');
+    $("#displayJupiterAge").text('Age on Jupiter is ' + jupiterAge[0] + ' years and ' + jupiterAge[1] + ' days.');
   });
 });
 

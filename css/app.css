@@ -1,4 +1,4 @@
-h2 {
+h1 {
     text-align: center;
 }
 
@@ -34,6 +34,7 @@ a{
 .well {
      background-color: rgba(253, 250, 300, 0.4);
      color: black;
+     margin-left: 50px;
  }
 
 .registerButton {

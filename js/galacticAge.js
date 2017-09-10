@@ -30,6 +30,21 @@ getCalculatedDateInSeconds(){
     return this.covertToYearsDays(mercuryAgeInSeconds);
   }
 
+  getVenusAge(){
+   let venusAgeInSeconds = this.dateInSeconds * 0.62;
+   return this.covertToYearsDays(venusAgeInSeconds);
+  }
+
+  getMarsAge(dateInSeconds){
+    let marsAgeInSeconds = this.dateInSeconds * 1.88;
+    return this.covertToYearsDays(marsAgeInSeconds);
+  }
+
+  getJupiterAge(dateInSeconds){
+   let jupiterAgeInSeconds = this.dateInSeconds * 11.86;
+   return this.covertToYearsDays(jupiterAgeInSeconds);
+  }
+
   covertToYearsDays(dateInSeconds){
     let moment = require('moment');
     const yearDays = 365;
@@ -39,8 +54,5 @@ getCalculatedDateInSeconds(){
     let calculatedSpaceAge = [numYears,numDays];
     return calculatedSpaceAge;
   }
-
-
-
 
 }
