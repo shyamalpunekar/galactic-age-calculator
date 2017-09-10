@@ -12,7 +12,7 @@ convertStringToDate() {
   return date;
 }
 
-getCalculatedDateInSeconds(){
+getCalculatedDateInSeconds() {
   let date = this.convertStringToDate();
   let currentDateTime = moment();
 
