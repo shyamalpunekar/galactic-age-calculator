@@ -1,4 +1,4 @@
-# Galactic Age Calculator Website JavaScript week-one Project
+# Galactic Age Calculator Website JavaScript/Jasmine-karma week-one Project
 
 #### Galactic Age Calculator Application, September 08 2017
 
@@ -16,21 +16,26 @@ _An application that determines a user’s age based on a planet’s solar years
 
 ## Specifications
 
-| Behavior      |
-| ------------- |
-| The user shall be able to create a new dating app user |
-| The user shall be able to view details of a specific dating app user |
-| The user shall be able to view details of all dating app users |
-| The user shall be able to create a new dating app question |
-| The user shall be able to view details of a specific dating app question |
-| The user shall be able to view the details of all dating app questions |
-| The user shall be able to link questions and users via a many-to-many relationship |
-| The user shall be able to create a new dating app date review |
-| The user shall be able to view details of all dating app date reviews |
+| Behavior      | Input | Output |
+| ------------- | ------------- | ------------- |
+| The user shall be able to enter User's age | 12 | | |
+| The user shall be able to User's date of birth | mm-dd-yyyy format| | |
+| Convert Earth Age Years into seconds| earthYears  | seconds |
+| Determine age difference between 2 dates | YYYY-mm-dd diff YYYY-mm-dd| |
+| Return age earthling in Mercury Years| earthAge | planetAge |
+| Return age earthling in Venus Years| earthAge | planetAge |
+| Return age earthling in Mars Years| earthAge | planetAge |
+| Return age earthling in Jupiter Years| earthAge | planetAge |
+| Determine User has left to live on each planet |  |  |
 
+# Setup
+  https://github.com/shyamalpunekar/galactic-age-calculator
+
+# Support and contact details
+
+  Please feel free to contact shyamal.punekar@gmail.com if you have any questions, issues, concerns, comments or suggestions.
 # Known Bugs
 _There are no known bugs at this time!_
-
 
 ## Technologies Used
 
