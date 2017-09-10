@@ -4537,7 +4537,7 @@ $(document).ready(function () {
   $('#galctic-age-form').submit(function (event) {
     event.preventDefault();
     var userAge = parseInt($('#inputAge').val());
-    var inputBirthDate = $("input#dateOfBirth").val();
+    var inputBirthDate = $("#dateOfBirth").val();
     var calculateSpaceAge = new _galacticAge.SpaceAge(inputBirthDate);
     var earthAge = calculateSpaceAge.getEarthAge();
 

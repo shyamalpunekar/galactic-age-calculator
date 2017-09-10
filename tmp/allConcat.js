@@ -4,7 +4,7 @@ import { SpaceAge } from './../js/galacticAge.js';
     $('#galctic-age-form').submit(function(event) {
       event.preventDefault();
       var userAge = parseInt($('#inputAge').val());
-      let inputBirthDate = $("input#dateOfBirth").val();
+      let inputBirthDate = $("#dateOfBirth").val();
       var calculateSpaceAge = new SpaceAge(inputBirthDate);
       var earthAge = calculateSpaceAge.getEarthAge();
 
@@ -16,7 +16,7 @@ import { SpaceAge } from './../js/galacticAge.js';
 $(document).ready(function(){
   $('#userName-form').submit(function(event){
     event.preventDefault();
-    var userName = $('#name').val();
+    let userName = $('#name').val();
     $('#userName-form').hide();
     $('#displayUserName').append('<p>Hi ' + userName + ' , here is your age in seconds</p>');
   });
