@@ -1,10 +1,10 @@
 {
-  "name": "galactic-age-calculator",
+  "name": "galacticAge",
   "version": "1.0.0",
   "description": "An application that determines a user’s age based on a planet’s solar years.",
-  "main": "index.js",
+  "main": "galacticAge-interface.js",
   "scripts": {
-    "test": "jasmine"
+     "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",

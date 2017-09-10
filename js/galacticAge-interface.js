@@ -1,4 +1,4 @@
-import SpaceAge  from './../js/galacticAge.js';
+import { SpaceAge } from './../js/galacticAge.js';
 
   $(document).ready(function() {
     $('#galctic-age-form').submit(function(event) {

@@ -5,7 +5,7 @@ describe('SpaceAge' , function() {
   var spaceAge;
   var inputtedDate;
   var date;
-  var curentDate;
+  var currentDate;
 
 
   beforeEach(function() {
@@ -17,7 +17,7 @@ describe('SpaceAge' , function() {
 
   it('should test whether test returns diffrence in dates', function() {
     let expected = currentDate.diff(inputtedDate, 'seconds');
-    expect(spaceAge.getCalculatedDateInSeconds(inputtedDate).toEqual(expected));
+    expect(spaceAge.getCalculatedDateInSeconds()).toEqual(expected);
   });
 
 
