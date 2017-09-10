@@ -4569,16 +4569,11 @@ $(document).ready(function () {
     var jupiterAge = calculateSpaceAge.getJupiterAge();
 
     $("#displayCurrentDateAndTime").text(moment());
-    //$("#displayTextOne").text('Age on Earth is');
-    $("#displayEarthAge").text('Age on Earth is ' + earthAge[0] + ' years and ' + earthAge[1] + ' days.');
-    //$("#displayTextTwo").text('Age on Mercury is');
-    $("#displayMercuryAge").text('Age on Mercury is ' + mercuryAge[0] + ' years and ' + mercuryAge[1] + ' days.');
-    //$("#displayTextThree").text('Age on Venus is');
-    $("#displayVenusAge").text('Age on Venus is ' + venusAge[0] + ' years and ' + venusAge[1] + ' days.');
-    //$("#displayTextFour").text('Age on Mars is');
-    $("#displayMarsAge").text('Age on Mars is ' + marsAge[0] + ' years and ' + marsAge[1] + ' days.');
-    //$("#displayTextFive").text('Age on Jupiter is');
-    $("#displayJupiterAge").text('Age on Jupiter is ' + jupiterAge[0] + ' years and ' + jupiterAge[1] + ' days.');
+    $("#displayEarthAge").text('Your age on Earth is ' + earthAge[0] + ' years and ' + earthAge[1] + ' days.');
+    $("#displayMercuryAge").text('Your age on Mercury is ' + mercuryAge[0] + ' years and ' + mercuryAge[1] + ' days.');
+    $("#displayVenusAge").text('Your age on Venus is ' + venusAge[0] + ' years and ' + venusAge[1] + ' days.');
+    $("#displayMarsAge").text('Your age on Mars is ' + marsAge[0] + ' years and ' + marsAge[1] + ' days.');
+    $("#displayJupiterAge").text('Your age on Jupiter is ' + jupiterAge[0] + ' years and ' + jupiterAge[1] + ' days.');
   });
 });
 

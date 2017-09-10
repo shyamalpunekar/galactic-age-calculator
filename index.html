@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="build/css/vendor.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css" media="all" type="text/css">
     <title>Galactic Age Calculator</title>
   </head>
   <body>
@@ -22,10 +22,10 @@
         <h3>Want to melt those Years away? Travel to an outer planet!</h3>
         <h4>To do so</h4>
         <ul>
-          <li>Fill in your birthdate below in the space indicated. (Note you must enter the birthdate as a mm-dd-yyyy!)</li>
-          <li>Click on the "Submit" button.</li>
-          <li>You will notice that Your age is different on the different worlds and your age in "days" varies wildly.</li>
-        </ul>
+          <li><b>Fill in your birthdate below in the space indicated. (Note you must enter the birthdate as a mm-dd-yyyy!)</b></li>
+          <li><b>Click on the "Submit" button.</b></li>
+          <li><b>You will notice that Your age is different on the different worlds and your age in "days" varies wildly.</b></li>
+        </ul><br>
           <form id="galctic-age-form">
             <label for="inputAge">Enter your age in years</label>
             <input id="inputAge" type="number" min="1" >
@@ -36,11 +36,10 @@
             <label for="name">Enter your Name:</label>
             <input id="name" type="text">
             <button type="submit" class="btn registerButton">Submit</button>
-
           </form>
         </div><br>
           <div class="well">
-            <div class="row">
+            <div class="row" id="outputResults">
                 <p><span id="displayCurrentDateAndTime"></span></p>
                 <p><span id="displayEarthAge"></span></p>
                 <p><span id="displayMercuryAge"></span></p>
